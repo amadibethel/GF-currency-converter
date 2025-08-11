@@ -28,7 +28,7 @@ This project provides hands-on experience with API integration, state management
 ### Installation
 1. Clone the repository  
    ```bash
-   git clone https://github.com/yourusername/currency-converter.git
+   git clone https://github.com/amadibethel/GF-currency-converter.git
 
 #### Project Structure
 currency-converter/

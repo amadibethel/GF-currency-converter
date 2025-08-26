@@ -1,4 +1,11 @@
-export default function CurrencySelector({ currencies, selected, onChange, label }) {
+interface Props {
+  currencies: string[];
+  selected: string;
+  onChange: (value: string) => void;
+  label: string;
+}
+
+export default function CurrencySelector({ currencies, selected, onChange, label }: Props) {
   return (
     <div>
       <label className="block text-sm font-medium mb-1">{label}</label>

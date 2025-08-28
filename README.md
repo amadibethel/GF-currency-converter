@@ -4,7 +4,7 @@ A responsive currency converter built with **React + Vite + TypeScript + Tailwin
 
 > **Live Demo:** https://currency-converter-fcrlkffx8-amadibethels-projects.vercel.app
 >
-> **Repository:** _Add your public GitHub URL here_
+> **Repository:** https://www.github.com/amadibethel/GF-currency-converter.git
 
 ---
 

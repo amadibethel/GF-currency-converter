@@ -4,8 +4,6 @@ import React, { useState } from "react";
 import ReactDOM from "react-dom/client";
 import "./index.css";
 
-// Currency Converter Component
-
 function Converter() {
   const [amount, setAmount] = useState<number>(1);
   const [from, setFrom] = useState("USD");
@@ -37,46 +35,71 @@ function Converter() {
   };
 
   return (
-    <div className="converter-container">
-      <h1>GF Currency Converter</h1>
-      <form onSubmit={handleSubmit} className="converter-form">
-        <div>
-          <label>Amount</label>
-          <input
-            type="number"
-            value={amount}
-            onChange={(e) => setAmount(Number(e.target.value))}
-            min="0"
-          />
+    <section>
+      <div className="main-container">
+        <div className="left-container">
+          <div className="title-header">
+            <h2>Currency Converter</h2>
+          </div>
+
+          <div className="converter">
+            <form onSubmit={handleSubmit}>
+              <div>
+                <label htmlFor="amount">Enter amount</label>
+                <input
+                  type="number"
+                  id="amount"
+                  value={amount}
+                  onChange={(e) => setAmount(Number(e.target.value))}
+                  placeholder="Enter amount"
+                  autoFocus
+                />
+              </div>
+
+              <div className="exchange">
+                <div>
+                  <label>From</label>
+                  <select value={from} onChange={(e) => setFrom(e.target.value)}>
+                    <option value="USD">USD</option>
+                    <option value="NGN">NGN</option>
+                    <option value="ZAR">ZAR</option>
+                    <option value="EUR">EUR</option>
+                  </select>
+                </div>
+
+                <div>
+                  <label>To</label>
+                  <select value={to} onChange={(e) => setTo(e.target.value)}>
+                    <option value="USD">USD</option>
+                    <option value="NGN">NGN</option>
+                    <option value="ZAR">ZAR</option>
+                    <option value="EUR">EUR</option>
+                  </select>
+                </div>
+              </div>
+
+              <div className="rate">
+                <p>{result || "Enter amount and select currencies"}</p>
+              </div>
+
+              <button type="submit" disabled={loading}>
+                {loading ? "Fetching..." : "Get Exchange Rate"}
+              </button>
+            </form>
+          </div>
         </div>
-        <div>
-          <label>From</label>
-          <select value={from} onChange={(e) => setFrom(e.target.value)}>
-            <option value="USD">USD</option>
-            <option value="NGN">NGN</option>
-            <option value="ZAR">ZAR</option>
-            <option value="EUR">EUR</option>
-          </select>
+
+        <div className="right-container">
+          <div className="image-container">
+            <img src="/assets/Financial-market.png" alt="display" />
+          </div>
+          <h2>GF Currency Converter</h2>
         </div>
-        <div>
-          <label>To</label>
-          <select value={to} onChange={(e) => setTo(e.target.value)}>
-            <option value="USD">USD</option>
-            <option value="NGN">NGN</option>
-            <option value="ZAR">ZAR</option>
-            <option value="EUR">EUR</option>
-          </select>
-        </div>
-        <button type="submit" disabled={loading}>
-          {loading ? "Fetching..." : "Convert"}
-        </button>
-      </form>
-      {result && <p className="result">{result}</p>}
-    </div>
+      </div>
+    </section>
   );
 }
 
-// Main App
 function App() {
   return (
     <div className="App">
@@ -85,7 +108,6 @@ function App() {
   );
 }
 
-// Mount App
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
   <React.StrictMode>
     <App />

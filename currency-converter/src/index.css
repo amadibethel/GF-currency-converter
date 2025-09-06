@@ -1,3 +1,189 @@
+/* Tailwind */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom styles */
+.converter-container {
+  max-width: 600px;
+  margin: auto;
+  padding: 2rem;
+  background: white;
+  border-radius: 10px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Libre+Bodoni:ital,wght@0,400..700;1,400..700&family=Noto+Serif+Old+Uyghur&family=Play:wght@400;700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "DM Sans", sans-serif;
+  letter-spacing: normal;
+  line-height: normal;
+}
+
+.section {
+  width: 100%;
+  height: auto;
+  padding: 3rem 3rem;
+}
+
+.main-container {
+  width: 75%;
+  height: auto;
+  margin: 5rem auto;
+  padding: 3rem 3rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #675aff;
+  border-radius: 1rem;
+}
+
+.left-container {
+  width: 60%;
+  height: auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  background-color: #fff;
+  border-radius: 1rem;
+  box-shadow: 2px 2px 20px #5c5656;
+}
+
+.right-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 1rem;
+}
+
+.right-container h2 {
+  font-size: clamp(0.5rem 2vw + 1rem 2rem);
+  font-weight: 700;
+}
+
+.left-container .exchange {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.exchange label {
+  font-size: 1rem;
+  font-weight: 250;
+  color: #000;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 1rem;
+  border-radius: 8px;
+}
+
+.exchange option {
+  padding: 2rem;
+}
+
+.converter form {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.75rem;
+}
+
+.title-header {
+  width: 100%;
+  height: auto;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-header h2 {
+  font-size: clamp(0.5rem 2vw + 1rem 2rem);
+  font-weight: 700;
+  color: #000;
+}
+
+form .rate {
+  width: 100%;
+  height: auto;
+}
+
+.rate p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #000;
+}
+
+form button {
+  width: 100%;
+  height: auto;
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 0.75rem;
+  border-radius: 8px;
+  background-color: #675aff;
+  color: #fff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(103, 90, 255, 0.2);
+}
+
+form button:hover {
+  background-color: #574be2;
+  color: #fff;
+  box-shadow: 2px 4px 24px #4a4480;
+  transition: background-color 0.2s, box-shadow 0.2s;
+}
+
+form {
+  width: 100%;
+  height: auto;
+}
+
+form label,
+form input {
+  width: 100%;
+  height: auto;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #000;
+}
+
+form input {
+  padding: 0.2rem;
+  border-radius: 4px;
+  border: #000 1px solid;
+  outline: none;
+}
+
+.image-container {
+  width: 50%;
+  height: auto;
+  border-radius: 1000rem;
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+  border-radius: 1000rem;
+}

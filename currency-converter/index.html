@@ -1,13 +1,81 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite + React + TS</title>
+    <title>Home</title>
+    <link rel="stylesheet" href="currency.css" />
   </head>
   <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
+    <section>
+      <div class="main-container">
+        <div class="left-container">
+          <div class="title-header"><h2>Currency converter</h2></div>
+          <div class="converter">
+            <form action="">
+              <div>
+                <label for="amount">Enter amount</label>
+                <input
+                  type="number"
+                  name="amount"
+                  id="amount"
+                  placeholder="Enter amount"
+                  autofocus
+                />
+              </div>
+              <div class="exchange">
+                <div>
+                  <label for="select currency">From</label>
+                  <select name="select currency" id="select currency">
+                    <option value="Nigeria">
+                      <img src="../assets/1x1/ng.svg" alt="NGN icon" />Nigeria
+                      (NGN)
+                    </option>
+                    <option value="USA">
+                      <img src="../assets/1x1/us.svg" alt="USA icon" />United
+                      State (USD)
+                    </option>
+                    <option value="South Africa">
+                      <img src="../assets/1x1/za.svg" alt="ZAR icon" /> South
+                      Africa (ZAR)
+                    </option>
+                  </select>
+                </div>
+
+                <div>
+                  <label for="select currency">To</label>
+                  <select name="select currency" id="select currency">
+                    <option value="USA">
+                      <img src="../assets/1x1/us.svg" alt="USD icon" />United
+                      State (USD)
+                    </option>
+                    <option value="Nigeria">
+                      <img src="../assets/1x1/ng.svg" alt="NGN icon" />Nigeria
+                      (NGN)
+                    </option>
+                    <option value="South Africa">
+                      <img src="../assets/1x1/za.svg" alt="ZAR icon" />South
+                      Africa (ZAR)
+                    </option>
+                  </select>
+                </div>
+              </div>
+              <div class="rate">
+                <p>1.00 USD = 17,600 Rand</p>
+              </div>
+
+              <button>Get Exchange Rate</button>
+            </form>
+          </div>
+        </div>
+        <div class="right-container">
+          <div class="image-container">
+            <img src="../assets/Financial market.png" alt="display-image" />
+          </div>
+          <h2>GF Currency Converter</h2>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
+<script src="currency.js" defer></script>
